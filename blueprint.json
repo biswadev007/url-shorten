@@ -1,0 +1,66 @@
+{
+	"package": "package.json",
+	"blueprint": "blueprint.md",
+	"input": "blueprint.md",
+	"output": "README.md",
+	"text": "This is a URL shortner application, built in Node JS with Express framework",
+	"logo": {
+		"src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+		"width": 150,
+		"height": 150
+	},
+	"placeholder": [
+		"[[",
+		"]]"
+	],
+	"documentationConfig": {
+		"markdown": {
+			"titleLevel": 2
+		}
+	},
+	"ids": {
+		"github": "andreasbm/readme",
+		"npm": "@appnest/readme"
+	},
+	"bullets": {
+		"Simple": "Extremely simple to use - so simple that it almost feels like magic!",
+		"Powerful": "Customize almost everything - add your own templates and variables if you like"
+	},
+    "sources": {
+        "github": "https://github.com/biswadev007/url-shorten",
+        "docker": "https://hub.docker.com/r/biswa6328/url-sortner"
+    },
+	"properties": [
+		[
+			"Attribute",
+			"Type",
+			"Description"
+		],
+		[
+			"**size**",
+			"'medium', 'large'",
+			"Determines the size"
+		],
+		[
+			"**active**",
+			"boolean",
+			"Whether the element is active or not"
+		]
+	],
+	"script": {
+        "start": "node app.js",
+        "start:dev": "nodemon app.js"
+    },
+    "dev": "http://localhost:5200/",
+    "create": {
+        "url": "http://localhost:5200/",
+        "method": "POST"
+    },
+    "data": {
+        "fullUrl": "some_large_url"
+    },
+    "fetch": {
+        "url": "http://localhost:5200/{{shortUrl}}",
+        "method": "GET"
+    }
+}
